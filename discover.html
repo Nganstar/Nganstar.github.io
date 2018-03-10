@@ -5,31 +5,33 @@
   <Title>Testing Firebase</title>
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="myStyles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDOCa5Of1-1g8fYG5sT4MP6OycL96_ZBJE",
-        authDomain: "recipebookdatabase.firebaseapp.com",
-        databaseURL: "https://recipebookdatabase.firebaseio.com",
-        projectId: "recipebookdatabase",
-        storageBucket: "recipebookdatabase.appspot.com",
-        messagingSenderId: "291820315274"
-      };
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="myStyles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDOCa5Of1-1g8fYG5sT4MP6OycL96_ZBJE",
+      authDomain: "recipebookdatabase.firebaseapp.com",
+      databaseURL: "https://recipebookdatabase.firebaseio.com",
+      projectId: "recipebookdatabase",
+      storageBucket: "recipebookdatabase.appspot.com",
+      messagingSenderId: "291820315274"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript"src="saveToFirebase.js"></script>
+  <script type="text/javascript">
+      var connectedRef = firebase.database().ref(".info/connected");
+      sconnectedRef.on("value", function(snap){});
+  </script>
 
-    //var bigOne = document.getElementbyId('bigOne');
-    //var dbRef = firebase.database().ref().child('text');
-    //dbRef.on('value', snap => bigOne.innerText = snap.val());
-      </script>
-      
-    <style>
-    </style>
+  <style>
+  </style>
 </head>
 <body>
   <nav class ="navbar navbar-inverse">
@@ -59,9 +61,8 @@
     <form class="form-signin">
       <h2 class="form-signin-heading">Subscribe to our mailing list!</h2>
       <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="saveToFirebase('kkk@gmail.com')">Subscribe!</button>
-
+      <input type="email" id="inputEmail" name="myEmail" class="form-control" placeholder="Email address" required autofocus>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="saveToFirebase('helloagain4@gmail.com')">Subscribe!</button>
     </form>
   </div>
   </body>
