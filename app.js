@@ -9,7 +9,26 @@
     messagingSenderId: "291820315274"
   };
   firebase.initializeApp(config);
-  const preObject = document.getElementById('object');
-  const dbRefObject = firebase.database().ref().child('object');
-  dbRefObject.on('value', snap => console.log(snap.val()));
+  //const preObject = document.getElementById('object');
+  //const dbRefObject = firebase.database().ref().child('object');
+  //dbRefObject.on('value', snap => console.log(snap.val()));
 }());
+
+
+
+
+function saveToFirebase(email) {
+    var emailObject = {
+        email: email
+    };
+
+    firebase.database().ref('subscription-entries').push().set(emailObject)
+        .then(function(snapshot) {
+            success(); // some success method
+        }, function(error) {
+            console.log('error' + error);
+            error(); // some error method
+        });
+        var firebaseRef = new Firebase('https://recipebookdatabase.firebaseio.com');
+//saveToFirebase(email);
+}
