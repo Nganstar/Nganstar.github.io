@@ -10,6 +10,14 @@ function saveToFirebase(email) {
             console.log('error' + error);
             error(); // some error method
         });
+        var firebaseRef = new Firebase('http://INSTANCE.firebaseio.com');
+firebaseRef.child('.info/connected').on('value', function(connectedSnap) {
+  if (connectedSnap.val() === true) {
+    document.writeln("hello");
+  } else {
+    /* we're disconnected! */
+  }
+});
 }
 
 saveToFirebase(email);
