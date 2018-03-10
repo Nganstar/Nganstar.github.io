@@ -22,11 +22,11 @@
         storageBucket: "recipebookdatabase.appspot.com",
         messagingSenderId: "291820315274"
       };
+      document.writeln("i got here");
     //var bigOne = document.getElementbyId('bigOne');
     //var dbRef = firebase.database().ref().child('text');
     //dbRef.on('value', snap => bigOne.innerText = snap.val());
       </script>
-
     <style>
     </style>
 </head>
@@ -59,7 +59,7 @@
       <h2 class="form-signin-heading">Subscribe to our mailing list!</h2>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="saveToFirebase(kkk@gmail.com)">Subscribe!</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="saveToFirebase('kkk@gmail.com')">Subscribe!</button>
 
     </form>
   </div>
