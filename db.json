@@ -1,0 +1,23 @@
+{
+    "_comment": "update this to include pictures for the recipes...",
+    "users": {
+        "user1": {
+            "email": "user1@gmail.com",
+            "password": "123456"
+        }
+    },
+    "recipes": {
+        "user1": {
+            "recipe1": {
+                "name": "Fried Rice",
+                "ingredients": "rice, chicken, peas, carrots",
+                "steps": "Fry this, fry that"
+              },
+              "recipe2": {
+                  "name": "chicken stew",
+                  "ingredients": "chicken breast, onions, green peppers",
+                  "steps":"you do this, you do that"
+              }
+            }
+        }
+    }
