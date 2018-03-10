@@ -9,6 +9,8 @@
     messagingSenderId: "291820315274"
   };
   firebase.initializeApp(config);
+  var connectedRef = firebase.database().ref(".info/connected");
+  sconnectedRef.on("value", function(snap){});
   //const preObject = document.getElementById('object');
   //const dbRefObject = firebase.database().ref().child('object');
   //dbRefObject.on('value', snap => console.log(snap.val()));
