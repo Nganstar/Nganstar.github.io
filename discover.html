@@ -1,1 +1,26 @@
-<h1>Under Construction</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <Title>Testing Firebase</title>
+</head>
+<body>
+  <h1 id="bigOne"></h1>
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDOCa5Of1-1g8fYG5sT4MP6OycL96_ZBJE",
+    authDomain: "recipebookdatabase.firebaseapp.com",
+    databaseURL: "https://recipebookdatabase.firebaseio.com",
+    projectId: "recipebookdatabase",
+    storageBucket: "recipebookdatabase.appspot.com",
+    messagingSenderId: "291820315274"
+  };
+  firebase.initializeApp(config);
+  var bigOne = document.getElementbyId('bigOne');
+  var dbRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+</script>
+</body>
